@@ -28,20 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Insprod = new System.Windows.Forms.Label();
+            this.Insprez = new System.Windows.Forms.Label();
+            this.Prodotto = new System.Windows.Forms.TextBox();
+            this.Prezzo = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.C = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // Insprod
+            // 
+            this.Insprod.AutoSize = true;
+            this.Insprod.Location = new System.Drawing.Point(66, 65);
+            this.Insprod.Name = "Insprod";
+            this.Insprod.Size = new System.Drawing.Size(97, 13);
+            this.Insprod.TabIndex = 0;
+            this.Insprod.Text = "Inserisci il prodotto:";
+            // 
+            // Insprez
+            // 
+            this.Insprez.AutoSize = true;
+            this.Insprez.Location = new System.Drawing.Point(66, 114);
+            this.Insprez.Name = "Insprez";
+            this.Insprez.Size = new System.Drawing.Size(89, 13);
+            this.Insprez.TabIndex = 1;
+            this.Insprez.Text = "Inserisci il prezzo:";
+            // 
+            // Prodotto
+            // 
+            this.Prodotto.Location = new System.Drawing.Point(69, 81);
+            this.Prodotto.Name = "Prodotto";
+            this.Prodotto.Size = new System.Drawing.Size(118, 20);
+            this.Prodotto.TabIndex = 2;
+            // 
+            // Prezzo
+            // 
+            this.Prezzo.Location = new System.Drawing.Point(69, 130);
+            this.Prezzo.Name = "Prezzo";
+            this.Prezzo.Size = new System.Drawing.Size(118, 20);
+            this.Prezzo.TabIndex = 3;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(453, 81);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(237, 342);
+            this.listBox1.TabIndex = 4;
+            // 
+            // C
+            // 
+            this.C.Location = new System.Drawing.Point(69, 174);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(100, 44);
+            this.C.TabIndex = 5;
+            this.C.Text = "Inserisci il prodotto in lista:";
+            this.C.UseVisualStyleBackColor = true;
+            this.C.Click += new System.EventHandler(this.Create);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.C);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.Prezzo);
+            this.Controls.Add(this.Prodotto);
+            this.Controls.Add(this.Insprez);
+            this.Controls.Add(this.Insprod);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label Insprod;
+        private System.Windows.Forms.Label Insprez;
+        private System.Windows.Forms.TextBox Prodotto;
+        private System.Windows.Forms.TextBox Prezzo;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button C;
     }
 }
 
