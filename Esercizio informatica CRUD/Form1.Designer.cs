@@ -32,8 +32,9 @@
             this.Insprez = new System.Windows.Forms.Label();
             this.Prodotto = new System.Windows.Forms.TextBox();
             this.Prezzo = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Listaprod = new System.Windows.Forms.ListBox();
             this.C = new System.Windows.Forms.Button();
+            this.R = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Insprod
@@ -68,13 +69,13 @@
             this.Prezzo.Size = new System.Drawing.Size(118, 20);
             this.Prezzo.TabIndex = 3;
             // 
-            // listBox1
+            // Listaprod
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(453, 81);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(237, 342);
-            this.listBox1.TabIndex = 4;
+            this.Listaprod.FormattingEnabled = true;
+            this.Listaprod.Location = new System.Drawing.Point(453, 81);
+            this.Listaprod.Name = "Listaprod";
+            this.Listaprod.Size = new System.Drawing.Size(237, 342);
+            this.Listaprod.TabIndex = 4;
             // 
             // C
             // 
@@ -86,13 +87,24 @@
             this.C.UseVisualStyleBackColor = true;
             this.C.Click += new System.EventHandler(this.Create);
             // 
+            // R
+            // 
+            this.R.Location = new System.Drawing.Point(69, 234);
+            this.R.Name = "R";
+            this.R.Size = new System.Drawing.Size(100, 44);
+            this.R.TabIndex = 6;
+            this.R.Text = "Visualizza lista prodotti:";
+            this.R.UseVisualStyleBackColor = true;
+            this.R.Click += new System.EventHandler(this.Read);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.R);
             this.Controls.Add(this.C);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.Listaprod);
             this.Controls.Add(this.Prezzo);
             this.Controls.Add(this.Prodotto);
             this.Controls.Add(this.Insprez);
@@ -110,8 +122,9 @@
         private System.Windows.Forms.Label Insprez;
         private System.Windows.Forms.TextBox Prodotto;
         private System.Windows.Forms.TextBox Prezzo;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox Listaprod;
         private System.Windows.Forms.Button C;
+        private System.Windows.Forms.Button R;
     }
 }
 

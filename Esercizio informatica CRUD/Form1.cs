@@ -34,5 +34,14 @@ namespace Esercizio_informatica_CRUD
         {
             Aggiunta();
         }
+
+        private void Read(object sender, EventArgs e)
+        {
+            Listaprod.Items.Clear();
+            for (int i=0; i<dim; i++)
+            {
+                Listaprod.Items.Add("Prodotto: "+p[i].prodotto+" Prezzo: " + p[i].prezzo);
+            }
+        }
     }
 }
