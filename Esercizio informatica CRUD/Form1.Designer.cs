@@ -35,12 +35,19 @@
             this.Listaprod = new System.Windows.Forms.ListBox();
             this.C = new System.Windows.Forms.Button();
             this.R = new System.Windows.Forms.Button();
+            this.Prodvecchio = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Prodnuovo = new System.Windows.Forms.TextBox();
+            this.U = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Prezzonuovo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Insprod
             // 
             this.Insprod.AutoSize = true;
-            this.Insprod.Location = new System.Drawing.Point(66, 65);
+            this.Insprod.Location = new System.Drawing.Point(66, 35);
             this.Insprod.Name = "Insprod";
             this.Insprod.Size = new System.Drawing.Size(97, 13);
             this.Insprod.TabIndex = 0;
@@ -49,7 +56,7 @@
             // Insprez
             // 
             this.Insprez.AutoSize = true;
-            this.Insprez.Location = new System.Drawing.Point(66, 114);
+            this.Insprez.Location = new System.Drawing.Point(66, 74);
             this.Insprez.Name = "Insprez";
             this.Insprez.Size = new System.Drawing.Size(89, 13);
             this.Insprez.TabIndex = 1;
@@ -57,14 +64,14 @@
             // 
             // Prodotto
             // 
-            this.Prodotto.Location = new System.Drawing.Point(69, 81);
+            this.Prodotto.Location = new System.Drawing.Point(69, 51);
             this.Prodotto.Name = "Prodotto";
             this.Prodotto.Size = new System.Drawing.Size(118, 20);
             this.Prodotto.TabIndex = 2;
             // 
             // Prezzo
             // 
-            this.Prezzo.Location = new System.Drawing.Point(69, 130);
+            this.Prezzo.Location = new System.Drawing.Point(69, 90);
             this.Prezzo.Name = "Prezzo";
             this.Prezzo.Size = new System.Drawing.Size(118, 20);
             this.Prezzo.TabIndex = 3;
@@ -79,7 +86,7 @@
             // 
             // C
             // 
-            this.C.Location = new System.Drawing.Point(69, 174);
+            this.C.Location = new System.Drawing.Point(214, 51);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(100, 44);
             this.C.TabIndex = 5;
@@ -89,7 +96,7 @@
             // 
             // R
             // 
-            this.R.Location = new System.Drawing.Point(69, 234);
+            this.R.Location = new System.Drawing.Point(320, 51);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(100, 44);
             this.R.TabIndex = 6;
@@ -97,11 +104,77 @@
             this.R.UseVisualStyleBackColor = true;
             this.R.Click += new System.EventHandler(this.Read);
             // 
+            // Prodvecchio
+            // 
+            this.Prodvecchio.Location = new System.Drawing.Point(69, 178);
+            this.Prodvecchio.Name = "Prodvecchio";
+            this.Prodvecchio.Size = new System.Drawing.Size(118, 20);
+            this.Prodvecchio.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(66, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Inserisci il prodotto da modificare:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Inserisci il nuovo nome del prodotto:";
+            // 
+            // Prodnuovo
+            // 
+            this.Prodnuovo.Location = new System.Drawing.Point(69, 217);
+            this.Prodnuovo.Name = "Prodnuovo";
+            this.Prodnuovo.Size = new System.Drawing.Size(118, 20);
+            this.Prodnuovo.TabIndex = 10;
+            // 
+            // U
+            // 
+            this.U.Location = new System.Drawing.Point(248, 162);
+            this.U.Name = "U";
+            this.U.Size = new System.Drawing.Size(100, 44);
+            this.U.TabIndex = 11;
+            this.U.Text = "Modifica lista:";
+            this.U.UseVisualStyleBackColor = true;
+            this.U.Click += new System.EventHandler(this.Update);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(66, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Inserisci il nuovo prezzo del prodotto:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // Prezzonuovo
+            // 
+            this.Prezzonuovo.Location = new System.Drawing.Point(69, 256);
+            this.Prezzonuovo.Name = "Prezzonuovo";
+            this.Prezzonuovo.Size = new System.Drawing.Size(114, 20);
+            this.Prezzonuovo.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Prezzonuovo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.U);
+            this.Controls.Add(this.Prodnuovo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Prodvecchio);
             this.Controls.Add(this.R);
             this.Controls.Add(this.C);
             this.Controls.Add(this.Listaprod);
@@ -125,6 +198,13 @@
         private System.Windows.Forms.ListBox Listaprod;
         private System.Windows.Forms.Button C;
         private System.Windows.Forms.Button R;
+        private System.Windows.Forms.TextBox Prodvecchio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Prodnuovo;
+        private System.Windows.Forms.Button U;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Prezzonuovo;
     }
 }
 

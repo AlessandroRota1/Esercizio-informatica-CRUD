@@ -29,6 +29,14 @@ namespace Esercizio_informatica_CRUD
             p[dim].prezzo = double.Parse(Prezzo.Text);
             dim++;
         }
+        public void Visualizza()
+        {
+            Listaprod.Items.Clear();
+            for (int i = 0; i < dim; i++)
+            {
+                Listaprod.Items.Add("Prodotto: " + p[i].prodotto + " Prezzo: " + p[i].prezzo);
+            }
+        }
 
         private void Create(object sender, EventArgs e)
         {
@@ -37,11 +45,25 @@ namespace Esercizio_informatica_CRUD
 
         private void Read(object sender, EventArgs e)
         {
-            Listaprod.Items.Clear();
+            Visualizza();
+        }
+
+        private void Update(object sender, EventArgs e)
+        {
             for (int i=0; i<dim; i++)
             {
-                Listaprod.Items.Add("Prodotto: "+p[i].prodotto+" Prezzo: " + p[i].prezzo);
+                if (p[i].prodotto == Prodvecchio.Text)
+                {
+                    p[i].prodotto = Prodnuovo.Text;
+                    p[i].prezzo = double.Parse(Prezzonuovo.Text);
+                }
             }
+            Visualizza();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
