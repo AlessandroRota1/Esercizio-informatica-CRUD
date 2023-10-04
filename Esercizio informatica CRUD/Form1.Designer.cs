@@ -34,7 +34,6 @@
             this.Prezzo = new System.Windows.Forms.TextBox();
             this.Listaprod = new System.Windows.Forms.ListBox();
             this.C = new System.Windows.Forms.Button();
-            this.R = new System.Windows.Forms.Button();
             this.Prodvecchio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -96,16 +95,6 @@
             this.C.Text = "Inserisci il prodotto in lista:";
             this.C.UseVisualStyleBackColor = true;
             this.C.Click += new System.EventHandler(this.Create);
-            // 
-            // R
-            // 
-            this.R.Location = new System.Drawing.Point(320, 51);
-            this.R.Name = "R";
-            this.R.Size = new System.Drawing.Size(100, 44);
-            this.R.TabIndex = 6;
-            this.R.Text = "Visualizza lista prodotti:";
-            this.R.UseVisualStyleBackColor = true;
-            this.R.Click += new System.EventHandler(this.Read);
             // 
             // Prodvecchio
             // 
@@ -206,7 +195,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Prodvecchio);
-            this.Controls.Add(this.R);
             this.Controls.Add(this.C);
             this.Controls.Add(this.Listaprod);
             this.Controls.Add(this.Prezzo);
@@ -229,7 +217,6 @@
         private System.Windows.Forms.TextBox Prezzo;
         private System.Windows.Forms.ListBox Listaprod;
         private System.Windows.Forms.Button C;
-        private System.Windows.Forms.Button R;
         private System.Windows.Forms.TextBox Prodvecchio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

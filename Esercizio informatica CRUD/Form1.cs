@@ -41,6 +41,7 @@ namespace Esercizio_informatica_CRUD
         private void Create(object sender, EventArgs e)
         {
             Aggiunta();
+            Visualizza();
         }
 
         private void Read(object sender, EventArgs e)
