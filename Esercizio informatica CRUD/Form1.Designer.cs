@@ -45,6 +45,8 @@
             this.Prodcancellato = new System.Windows.Forms.TextBox();
             this.D = new System.Windows.Forms.Button();
             this.Ordalf = new System.Windows.Forms.Button();
+            this.Somma = new System.Windows.Forms.Button();
+            this.Mostrasom = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Insprod
@@ -191,11 +193,30 @@
             this.Ordalf.UseVisualStyleBackColor = true;
             this.Ordalf.Click += new System.EventHandler(this.Alfabetico);
             // 
+            // Somma
+            // 
+            this.Somma.Location = new System.Drawing.Point(672, 35);
+            this.Somma.Name = "Somma";
+            this.Somma.Size = new System.Drawing.Size(116, 36);
+            this.Somma.TabIndex = 18;
+            this.Somma.Text = "Mostra somma prodotti:";
+            this.Somma.UseVisualStyleBackColor = true;
+            this.Somma.Click += new System.EventHandler(this.Somm);
+            // 
+            // Mostrasom
+            // 
+            this.Mostrasom.Location = new System.Drawing.Point(672, 90);
+            this.Mostrasom.Name = "Mostrasom";
+            this.Mostrasom.Size = new System.Drawing.Size(116, 20);
+            this.Mostrasom.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Mostrasom);
+            this.Controls.Add(this.Somma);
             this.Controls.Add(this.Ordalf);
             this.Controls.Add(this.D);
             this.Controls.Add(this.Prodcancellato);
@@ -240,6 +261,8 @@
         private System.Windows.Forms.TextBox Prodcancellato;
         private System.Windows.Forms.Button D;
         private System.Windows.Forms.Button Ordalf;
+        private System.Windows.Forms.Button Somma;
+        private System.Windows.Forms.TextBox Mostrasom;
     }
 }
 

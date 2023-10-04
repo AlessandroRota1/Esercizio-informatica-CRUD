@@ -114,5 +114,15 @@ namespace Esercizio_informatica_CRUD
             Visualizza();
             
         }
+
+        private void Somm(object sender, EventArgs e)
+        {
+            double somma = 0;
+            for (int i =0; i<dim; i++)
+            {
+                somma = somma+ p[i].prezzo;
+            }
+            Mostrasom.Text = "La somma è " + somma;
+        }
     }
 }
