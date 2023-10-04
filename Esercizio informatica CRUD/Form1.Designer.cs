@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Prodcancellato = new System.Windows.Forms.TextBox();
             this.D = new System.Windows.Forms.Button();
+            this.Ordalf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Insprod
@@ -81,7 +82,7 @@
             // Listaprod
             // 
             this.Listaprod.FormattingEnabled = true;
-            this.Listaprod.Location = new System.Drawing.Point(453, 81);
+            this.Listaprod.Location = new System.Drawing.Point(420, 35);
             this.Listaprod.Name = "Listaprod";
             this.Listaprod.Size = new System.Drawing.Size(237, 342);
             this.Listaprod.TabIndex = 4;
@@ -180,11 +181,22 @@
             this.D.Text = "Cancella prodotto:";
             this.D.UseVisualStyleBackColor = true;
             // 
+            // Ordalf
+            // 
+            this.Ordalf.Location = new System.Drawing.Point(69, 384);
+            this.Ordalf.Name = "Ordalf";
+            this.Ordalf.Size = new System.Drawing.Size(135, 45);
+            this.Ordalf.TabIndex = 17;
+            this.Ordalf.Text = "Visualizza lista in ordine alfabetico:";
+            this.Ordalf.UseVisualStyleBackColor = true;
+            this.Ordalf.Click += new System.EventHandler(this.Alfabetico);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Ordalf);
             this.Controls.Add(this.D);
             this.Controls.Add(this.Prodcancellato);
             this.Controls.Add(this.label4);
@@ -227,6 +239,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Prodcancellato;
         private System.Windows.Forms.Button D;
+        private System.Windows.Forms.Button Ordalf;
     }
 }
 

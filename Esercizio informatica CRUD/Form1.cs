@@ -37,6 +37,8 @@ namespace Esercizio_informatica_CRUD
                 Listaprod.Items.Add("Prodotto: " + p[i].prodotto + " Prezzo: " + p[i].prezzo);
             }
         }
+        
+
 
         private void Create(object sender, EventArgs e)
         {
@@ -65,6 +67,7 @@ namespace Esercizio_informatica_CRUD
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
 
         private void Delete(object sender, EventArgs e)
         {
@@ -89,6 +92,27 @@ namespace Esercizio_informatica_CRUD
                 dim--;
             }
             Visualizza();
+        }
+
+        private void Alfabetico(object sender, EventArgs e)
+        {
+            for (int i=0; i<dim; i++)
+            {
+                for (int j=i+1; j<dim; j++)
+                {
+                    if (string.Compare(p[i].prodotto, p[j].prodotto)>0)
+                    {
+                        string a = p[i].prodotto;
+                        double b = p[i].prezzo;
+                        p[i].prodotto = p[j].prodotto;
+                        p[i].prezzo = p[j].prezzo;
+                        p[j].prodotto = a;
+                        p[j].prezzo = b;
+                    }
+                }
+            }
+            Visualizza();
+            
         }
     }
 }
