@@ -65,5 +65,30 @@ namespace Esercizio_informatica_CRUD
         {
 
         }
+
+        private void Delete(object sender, EventArgs e)
+        {
+            bool controllo = false;
+            int i = 0;
+            while (controllo == false)
+            {
+                if (p[i].prodotto == Prodcancellato.Text)
+                {
+                    controllo = true;
+                }
+                i++;
+            }
+            if (controllo == true)
+            {
+                for (int k = i - 1; k < dim; k++)
+                {
+                    p[k].prodotto = p[k + 1].prodotto;
+                    p[k].prezzo = p[k + 1].prezzo;
+                }
+
+                dim--;
+            }
+            Visualizza();
+        }
     }
 }

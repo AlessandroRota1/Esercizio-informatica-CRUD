@@ -42,6 +42,9 @@
             this.U = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Prezzonuovo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Prodcancellato = new System.Windows.Forms.TextBox();
+            this.D = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Insprod
@@ -163,11 +166,39 @@
             this.Prezzonuovo.Size = new System.Drawing.Size(114, 20);
             this.Prezzonuovo.TabIndex = 13;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(66, 317);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Inserisci il prodotto da cancellare:";
+            // 
+            // Prodcancellato
+            // 
+            this.Prodcancellato.Location = new System.Drawing.Point(69, 333);
+            this.Prodcancellato.Name = "Prodcancellato";
+            this.Prodcancellato.Size = new System.Drawing.Size(118, 20);
+            this.Prodcancellato.TabIndex = 15;
+            // 
+            // D
+            // 
+            this.D.Location = new System.Drawing.Point(248, 314);
+            this.D.Name = "D";
+            this.D.Size = new System.Drawing.Size(111, 39);
+            this.D.TabIndex = 16;
+            this.D.Text = "Cancella prodotto:";
+            this.D.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.D);
+            this.Controls.Add(this.Prodcancellato);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Prezzonuovo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.U);
@@ -184,6 +215,7 @@
             this.Controls.Add(this.Insprod);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Delete);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +237,9 @@
         private System.Windows.Forms.Button U;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Prezzonuovo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Prodcancellato;
+        private System.Windows.Forms.Button D;
     }
 }
 
