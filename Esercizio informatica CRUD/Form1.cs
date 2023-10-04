@@ -65,7 +65,6 @@ namespace Esercizio_informatica_CRUD
         private void label3_Click(object sender, EventArgs e)
         {
 
-        }
 
         private void Delete(object sender, EventArgs e)
         {
