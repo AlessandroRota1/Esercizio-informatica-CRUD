@@ -47,6 +47,11 @@
             this.Ordalf = new System.Windows.Forms.Button();
             this.Somma = new System.Windows.Forms.Button();
             this.Mostrasom = new System.Windows.Forms.TextBox();
+            this.perc = new System.Windows.Forms.Label();
+            this.Percentuale = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Prodperc = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Insprod
@@ -185,7 +190,7 @@
             // 
             // Ordalf
             // 
-            this.Ordalf.Location = new System.Drawing.Point(69, 384);
+            this.Ordalf.Location = new System.Drawing.Point(69, 387);
             this.Ordalf.Name = "Ordalf";
             this.Ordalf.Size = new System.Drawing.Size(135, 45);
             this.Ordalf.TabIndex = 17;
@@ -210,11 +215,58 @@
             this.Mostrasom.Size = new System.Drawing.Size(116, 20);
             this.Mostrasom.TabIndex = 19;
             // 
+            // perc
+            // 
+            this.perc.AutoSize = true;
+            this.perc.Location = new System.Drawing.Point(66, 505);
+            this.perc.Name = "perc";
+            this.perc.Size = new System.Drawing.Size(235, 13);
+            this.perc.TabIndex = 20;
+            this.perc.Text = "Inserisci la percentuale da rimuovere al prodotto:";
+            // 
+            // Percentuale
+            // 
+            this.Percentuale.Location = new System.Drawing.Point(69, 521);
+            this.Percentuale.Name = "Percentuale";
+            this.Percentuale.Size = new System.Drawing.Size(119, 20);
+            this.Percentuale.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(66, 466);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(242, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Inserisci il prodotto a cui rimuovere la percentuale:";
+            // 
+            // Prodperc
+            // 
+            this.Prodperc.Location = new System.Drawing.Point(69, 482);
+            this.Prodperc.Name = "Prodperc";
+            this.Prodperc.Size = new System.Drawing.Size(119, 20);
+            this.Prodperc.TabIndex = 23;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(314, 466);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 52);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Rimuovi percentuale dal prodotto scelto:";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Per);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 642);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Prodperc);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Percentuale);
+            this.Controls.Add(this.perc);
             this.Controls.Add(this.Mostrasom);
             this.Controls.Add(this.Somma);
             this.Controls.Add(this.Ordalf);
@@ -263,6 +315,11 @@
         private System.Windows.Forms.Button Ordalf;
         private System.Windows.Forms.Button Somma;
         private System.Windows.Forms.TextBox Mostrasom;
+        private System.Windows.Forms.Label perc;
+        private System.Windows.Forms.TextBox Percentuale;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Prodperc;
+        private System.Windows.Forms.Button button1;
     }
 }
 

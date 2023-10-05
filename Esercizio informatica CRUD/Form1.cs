@@ -124,5 +124,18 @@ namespace Esercizio_informatica_CRUD
             }
             Mostrasom.Text = "La somma è " + somma;
         }
+
+        private void Per(object sender, EventArgs e)
+        {
+            double a= Convert.ToDouble(Percentuale.Text); ;
+            for (int i=0; i<dim; i++)
+            {
+                if (Prodperc.Text == p[i].prodotto)
+                {
+                    p[i].prezzo = p[i].prezzo - (p[i].prezzo / 100*a);
+                }
+            }
+            Visualizza();
+        }
     }
 }
