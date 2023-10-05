@@ -137,5 +137,35 @@ namespace Esercizio_informatica_CRUD
             }
             Visualizza();
         }
+
+        private void Min_Click(object sender, EventArgs e)
+        {
+            double a = p[0].prezzo;
+            string b = p[0].prodotto;
+            for (int i=0; i<dim; i++)
+            {
+                if (p[i].prezzo<a)
+                {
+                    a = p[i].prezzo;
+                    b = p[i].prodotto;
+                }
+            }
+            minimo.Text = "Prodotto: " + b + " Prezzo: " + a;
+        }
+
+        private void max_Click(object sender, EventArgs e)
+        {
+            double a = 0;
+            string b = p[0].prodotto;
+            for (int i=0; i<dim; i++)
+            {
+                if (p[i].prezzo>a)
+                {
+                    a=p[i].prezzo;
+                    b=p[i].prodotto;
+                }
+            }
+            massimo.Text = "Prodotto: " + b + " Prezzo: " + a;
+        }
     }
 }

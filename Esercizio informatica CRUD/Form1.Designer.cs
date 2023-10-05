@@ -52,6 +52,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Prodperc = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.minimo = new System.Windows.Forms.TextBox();
+            this.massimo = new System.Windows.Forms.TextBox();
+            this.Min = new System.Windows.Forms.Button();
+            this.max = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Insprod
@@ -204,7 +208,7 @@
             this.Somma.Name = "Somma";
             this.Somma.Size = new System.Drawing.Size(116, 36);
             this.Somma.TabIndex = 18;
-            this.Somma.Text = "Mostra somma prodotti:";
+            this.Somma.Text = "Mostra somma del prezzo dei prodotti:";
             this.Somma.UseVisualStyleBackColor = true;
             this.Somma.Click += new System.EventHandler(this.Somm);
             // 
@@ -257,11 +261,49 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Per);
             // 
+            // minimo
+            // 
+            this.minimo.Location = new System.Drawing.Point(474, 418);
+            this.minimo.Name = "minimo";
+            this.minimo.Size = new System.Drawing.Size(175, 20);
+            this.minimo.TabIndex = 26;
+            // 
+            // massimo
+            // 
+            this.massimo.Location = new System.Drawing.Point(474, 478);
+            this.massimo.Name = "massimo";
+            this.massimo.Size = new System.Drawing.Size(175, 20);
+            this.massimo.TabIndex = 28;
+            // 
+            // Min
+            // 
+            this.Min.Location = new System.Drawing.Point(655, 406);
+            this.Min.Name = "Min";
+            this.Min.Size = new System.Drawing.Size(133, 43);
+            this.Min.TabIndex = 29;
+            this.Min.Text = "Visualizza il prodotto con il prezzo minimo:";
+            this.Min.UseVisualStyleBackColor = true;
+            this.Min.Click += new System.EventHandler(this.Min_Click);
+            // 
+            // max
+            // 
+            this.max.Location = new System.Drawing.Point(655, 466);
+            this.max.Name = "max";
+            this.max.Size = new System.Drawing.Size(133, 43);
+            this.max.TabIndex = 30;
+            this.max.Text = "Visualizza il prodotto con il prezzo massimo:";
+            this.max.UseVisualStyleBackColor = true;
+            this.max.Click += new System.EventHandler(this.max_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 642);
+            this.Controls.Add(this.max);
+            this.Controls.Add(this.Min);
+            this.Controls.Add(this.massimo);
+            this.Controls.Add(this.minimo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Prodperc);
             this.Controls.Add(this.label5);
@@ -320,6 +362,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Prodperc;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox minimo;
+        private System.Windows.Forms.TextBox massimo;
+        private System.Windows.Forms.Button Min;
+        private System.Windows.Forms.Button max;
     }
 }
 
