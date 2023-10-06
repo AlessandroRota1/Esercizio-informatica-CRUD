@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Esercizio_informatica_CRUD
 {
@@ -37,7 +38,46 @@ namespace Esercizio_informatica_CRUD
                 Listaprod.Items.Add("Prodotto: " + p[i].prodotto + " Prezzo: " + p[i].prezzo);
             }
         }
-        
+        public int GetLength(string str)
+        {
+            int lunghezza = 0, l = 0;
+            str += '^';
+            while (str[l] != '^')
+            {
+                lunghezza++;
+                l++;
+            }
+
+            return lunghezza;
+        }
+
+        public string[] Split(string stringa)
+        {
+            string[] array = new string[20];
+            string frase = "";
+            int p = 0;
+            for (int i = 0; i < GetLength(stringa); i++)
+            {
+                if (stringa[i] == ';')
+                {
+                    array[p] = frase;
+                    p++;
+                    frase = "";
+                }
+                else
+                {
+                    frase += stringa[i];
+                }
+
+                if (i == stringa.Length - 1)
+                {
+                    array[p] = frase;
+                }
+            }
+            return array;
+        }
+
+
 
 
         private void Create(object sender, EventArgs e)
@@ -166,6 +206,19 @@ namespace Esercizio_informatica_CRUD
                 }
             }
             massimo.Text = "Prodotto: " + b + " Prezzo: " + a;
+        }
+
+        private void Lettura_Click(object sender, EventArgs e)
+        {
+            StreamReader file = new StreamReader("lettura.txt");
+            do
+            {
+                string[] prodprez = new string[2];
+                string array = file.ReadLine();
+                prodprez = Split(array);
+                Listaprod.Items.Add("Prodotto: " + prodprez[0]+" Prezzo: " + prodprez[1]) ;
+            } while (!file.EndOfStream);
+            file.Close();
         }
     }
 }

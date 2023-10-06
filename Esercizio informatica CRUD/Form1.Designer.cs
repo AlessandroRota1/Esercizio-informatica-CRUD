@@ -56,6 +56,8 @@
             this.massimo = new System.Windows.Forms.TextBox();
             this.Min = new System.Windows.Forms.Button();
             this.max = new System.Windows.Forms.Button();
+            this.Lettura = new System.Windows.Forms.Button();
+            this.Scrittura = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Insprod
@@ -295,11 +297,32 @@
             this.max.UseVisualStyleBackColor = true;
             this.max.Click += new System.EventHandler(this.max_Click);
             // 
+            // Lettura
+            // 
+            this.Lettura.Location = new System.Drawing.Point(214, 557);
+            this.Lettura.Name = "Lettura";
+            this.Lettura.Size = new System.Drawing.Size(170, 53);
+            this.Lettura.TabIndex = 31;
+            this.Lettura.Text = "Lettura lista da file:";
+            this.Lettura.UseVisualStyleBackColor = true;
+            this.Lettura.Click += new System.EventHandler(this.Lettura_Click);
+            // 
+            // Scrittura
+            // 
+            this.Scrittura.Location = new System.Drawing.Point(390, 557);
+            this.Scrittura.Name = "Scrittura";
+            this.Scrittura.Size = new System.Drawing.Size(170, 53);
+            this.Scrittura.TabIndex = 32;
+            this.Scrittura.Text = "Scrittura lista su file:";
+            this.Scrittura.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 642);
+            this.Controls.Add(this.Scrittura);
+            this.Controls.Add(this.Lettura);
             this.Controls.Add(this.max);
             this.Controls.Add(this.Min);
             this.Controls.Add(this.massimo);
@@ -366,6 +389,8 @@
         private System.Windows.Forms.TextBox massimo;
         private System.Windows.Forms.Button Min;
         private System.Windows.Forms.Button max;
+        private System.Windows.Forms.Button Lettura;
+        private System.Windows.Forms.Button Scrittura;
     }
 }
 
