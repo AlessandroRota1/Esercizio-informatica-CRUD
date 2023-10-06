@@ -315,6 +315,7 @@
             this.Scrittura.TabIndex = 32;
             this.Scrittura.Text = "Scrittura lista su file:";
             this.Scrittura.UseVisualStyleBackColor = true;
+            this.Scrittura.Click += new System.EventHandler(this.Scrittura_Click);
             // 
             // Form1
             // 

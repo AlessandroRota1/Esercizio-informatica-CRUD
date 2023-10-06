@@ -220,5 +220,15 @@ namespace Esercizio_informatica_CRUD
             } while (!file.EndOfStream);
             file.Close();
         }
+
+        private void Scrittura_Click(object sender, EventArgs e)
+        {
+            StreamWriter file = new StreamWriter("scrittura.txt");
+            for (int i=0; i<dim; i++)
+            {
+                file.WriteLine((p[i].prodotto)+"; " + p[i].prezzo );
+            }
+            file.Close();
+        }
     }
 }
