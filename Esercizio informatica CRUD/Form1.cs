@@ -27,8 +27,17 @@ namespace Esercizio_informatica_CRUD
         public void Aggiunta()
         {
             p[dim].prodotto = Prodotto.Text;
-            p[dim].prezzo = double.Parse(Prezzo.Text);
-            dim++;
+            double prezzo;
+            if (double.TryParse(Prezzo.Text, out prezzo))
+            {
+                p[dim].prezzo = prezzo;
+                dim++;
+            }
+            else
+            {
+                MessageBox.Show("Il carattere inserito non è un numero");
+            }
+
         }
         public void Visualizza()
         {
@@ -93,14 +102,21 @@ namespace Esercizio_informatica_CRUD
 
         private void Update(object sender, EventArgs e)
         {
+            bool controllo = false;
             for (int i=0; i<dim; i++)
             {
                 if (p[i].prodotto == Prodvecchio.Text)
                 {
                     p[i].prodotto = Prodnuovo.Text;
                     p[i].prezzo = double.Parse(Prezzonuovo.Text);
+                    controllo = true;
                 }
             }
+            if (controllo==false)
+            {
+                MessageBox.Show("Il prodotto digitato non è presente in lista");
+            }
+            
             Visualizza();
         }
 
