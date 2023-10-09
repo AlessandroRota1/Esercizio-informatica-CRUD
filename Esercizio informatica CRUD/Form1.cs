@@ -145,11 +145,6 @@ namespace Esercizio_informatica_CRUD
                     p[k].prezzo = p[k + 1].prezzo;
                 }
 
-                dim--;
-            }
-            Visualizza();
-        }
-
         private void Alfabetico(object sender, EventArgs e)
         {
             for (int i=0; i<dim; i++)
